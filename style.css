@@ -1,14 +1,23 @@
+
+
 /* Global */
 * {
     /* #2 #font #faces */
-    font-family: 'Arial', sans-serif;
-    margins: 0;
-    padding: 0;
+    font-family: 'Robot', 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
     /* #2 #colorful #background */
     background-color: #F5F5F5;
+}a
+
+button {
+    /* #2 #colourful #plusfive */
+    background-color: #CDDC39;
+    color: black;
+    text-align: center;
 }
 
 button, strong {
@@ -25,15 +34,33 @@ h1 {
 
 /* Channels list */
 ol {
-    /* #2 #colorful #channelandchat */
     background-color: white;
     list-style-type: none;
+}
+
+ol li h2 {
+    padding: 16px 16px 16px 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 48px;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+ol li h2 img {
+    display: inline;
+    vertical-align: middle;
+}
+
+ol li.selectedChannel {
+    border-left: 4px solid #3F51B5;
+    color: #3F51B5;
 }
 
 /* Tab bar */
 div#tab-bar {
     background-color: white;
     width: 80%;
+    margin: auto;
 }
 
 #tab-bar button {
@@ -42,10 +69,19 @@ div#tab-bar {
     border: none;
     font-size: 13px;
     width: 33%;
-    height: 40px;
+    height: 72px;
     padding: 16px;
+    box-sizing: border-box;
 }
 
+div#tab-bar button img {
+    display: block;
+    margin: auto;
+}
+
+div#tab-bar button.selected {
+    border-bottom: 4px solid #3F51B5;
+}
 
 /* Messages */
 .message {
@@ -54,33 +90,26 @@ div#tab-bar {
     margin-left: 2.5%;
 }
 
-.message.user {
-    margin-left: 17.5%;
-}
-
 .message h3 {
     font-size: medium;
+}
+
+.message.user {
+    margin-left: 17.5%;
 }
 
 .message p {
     /* #2 #colorful #channelandchat */
     background-color: white;
-    padding: 16px;
+    padding: 16px 16px 16px 16px;
 }
 
-.message button {
-    background-color: #CDDC39;
-    color: black;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.message em {
+.message h3 em {
     /* #2 #font #remaining overrides the default italic appearance of em elements*/
     font-size: larger;
     font-style: normal;
 }
 
-.message h3 strong a {
-    color: #3F51B5;
+.message h3 a {
+    color: black;
 }
